@@ -1,0 +1,61 @@
+<section id="gift" style="background-color: #fdf2f4;">
+    <h2 style="font-size: 2rem;">Titip Hadiah</h2>
+    <p class="story-p" style="margin-bottom: 30px;">
+        Doa restu Bapak/Ibu sekalian merupakan karunia yang sangat berarti bagi kami. Dan jika memberi merupakan ungkapan tanda kasih, Bapak/Ibu dapat memberi kado secara cashless. Terima kasih.
+    </p>
+
+    <div class="gift-card">
+        <div style="display: flex; justify-content: flex-end;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA" style="height: 25px;">
+        </div>
+        <div style="margin-top: 20px; text-align: left;">
+            <img src="https://cdn-icons-png.flaticon.com/512/6404/6404100.png" style="width: 40px; margin-bottom: 10px;" alt="chip">
+            <div id="norek1" style="font-size: 1.4rem; font-weight: bold; letter-spacing: 2px;">8880961633</div>
+            <div style="font-size: 1rem; color: #666; margin-top: 5px;">Fauzan Nurhaqim</div>
+        </div>
+        <button class="btn-copy" onclick="copyText('norek1')">📋 Copy</button>
+    </div>
+
+    <div class="gift-card">
+        <div style="display: flex; justify-content: flex-end;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA" style="height: 25px;">
+        </div>
+        <div style="margin-top: 20px; text-align: left;">
+            <img src="https://cdn-icons-png.flaticon.com/512/6404/6404100.png" style="width: 40px; margin-bottom: 10px;" alt="chip">
+            <div id="norek2" style="font-size: 1.4rem; font-weight: bold; letter-spacing: 2px;">088219870403</div>
+            <div style="font-size: 1rem; color: #666; margin-top: 5px;">Ajeng Rafi Rahmawati</div>
+        </div>
+        <button class="btn-copy" onclick="copyText('norek2')">📋 Copy</button>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 15px; max-width: 400px; margin: 30px auto; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679821.png" style="width: 50px; margin-bottom: 10px;" alt="Gift Box">
+        <p style="font-size: 0.8rem; color: #666;">Klik tombol di bawah untuk titip kado fisik ke acara:</p>
+        <a href="#" class="btn-open" style="display: inline-block; text-decoration: none; font-size: 0.9rem;">🎁 Pilih Kado Fisik</a>
+    </div>
+</section>
+
+<style>
+    .gift-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+        max-width: 400px; margin: 20px auto;
+        padding: 25px; border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        position: relative; border: 1px solid #eee;
+    }
+    .btn-copy {
+        position: absolute; bottom: 20px; right: 20px;
+        background: #eee; border: none; padding: 8px 15px;
+        border-radius: 5px; cursor: pointer; font-size: 0.8rem;
+    }
+    .btn-copy:active { background: var(--pink-soft); }
+</style>
+
+<script>
+    function copyText(elementId) {
+        const text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            alert("Nomor rekening berhasil disalin: " + text);
+        });
+    }
+</script>
